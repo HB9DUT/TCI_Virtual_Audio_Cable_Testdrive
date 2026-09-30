@@ -17,11 +17,25 @@ transmitter on, and off again shortly after the audio ends.
 > **This is a test version.** Read [What "test version" means](#what-test-version-means) before you
 > install it. Use it on a **test computer or in a virtual machine**, not on the PC you depend on.
 
+## The TCI host and this tool can run on different computers
+
+The TCI host (your SDR software) and the TCI Virtual Audio Cable do **not** have to run on the same
+PC: the bridge connects to the host by its address. That is why a **virtual machine is the ideal way to
+try it**: the SDR software keeps running on your normal PC, and the driver, the test mode and the
+digital-mode program live in the VM. If something goes wrong, you throw the VM away.
+
+> **Only tested on a local network.** So far the tool was tested with the TCI host on the same PC or in
+> the same local network (a virtual machine on the host PC). **Do not use it over the internet.**
+> The TCI connection is unencrypted and has no login, so never open the TCI port of your SDR software
+> to the internet or to a network you do not trust. Delay and dropouts on a long-distance link are
+> untested and likely to break digital modes, whose timing is strict.
+
 ## Requirements
 
 - Windows 11, 64 bit
 - Administrator rights
-- A TCI host that is reachable from the PC (TCI server enabled in the SDR software, default port 50001)
+- A TCI host that is reachable from the PC, on the same PC or in the same local network (TCI server
+  enabled in the SDR software, default port 50001). Not for use over the internet.
 - A valid amateur radio licence: see the [licence](#licence)
 
 ## What "test version" means
