@@ -1,0 +1,64 @@
+TCI VIRTUAL AUDIO CABLE - END USER LICENCE AGREEMENT
+
+Copyright (C) 2026 HB9DUT. All rights reserved.
+
+By installing or using this software you accept this agreement. If you do not accept it, do not
+install or use the software.
+
+1. Who may use it
+
+   The software is free of charge. It may be used only by a licensed radio amateur (a person holding
+   a valid amateur radio licence), on his or her own computers, for non-commercial amateur radio
+   purposes.
+
+2. What is not allowed
+
+   a) Commercial use of any kind, including use in a business, in a paid service or as part of a
+      product.
+   b) Selling, renting, sub-licensing or otherwise passing on the software for money.
+   c) Including the software in software collections, bundles, download portals, mirrors, disc
+      images or package repositories, or any other redistribution, without the explicit written
+      consent of the author. Please point others to the official download page instead.
+   d) Modifying the software, reverse engineering, decompiling or disassembling it, except where
+      the law explicitly allows this despite this clause.
+   e) Removing or changing copyright notices.
+
+3. The author
+
+   The author (HB9DUT) keeps all rights and may use and license the software commercially himself.
+   Nothing in this agreement transfers ownership of the software to you.
+
+4. Test version
+
+   This is a TEST VERSION. Its driver is signed with a self-signed test certificate, not by Microsoft.
+   To load it, Windows must run in "test signing" mode, which lowers the security of the computer,
+   and the installer adds the test certificate to the trusted certificates of the computer. Use it
+   on a test computer or in a virtual machine only, never on a computer you depend on. A driver can
+   crash Windows (blue screen) and cause loss of data. Back up first.
+
+5. Third-party software
+
+   The driver (tcivad.sys) contains portions derived from the Microsoft ACX audio codec sample,
+   Copyright (c) Microsoft Corporation, licensed under the Microsoft Public License (MS-PL). The
+   text of the MS-PL is part of this package. For those portions, nothing in this agreement limits
+   the rights the MS-PL gives you.
+
+6. "As is", no warranty, no liability
+
+   The software is provided "as is", without warranty of any kind, express or implied. The author
+   excludes all liability for any damage arising from the use of the software or from the inability
+   to use it, including damage to hardware, software, data or radio equipment, and consequential
+   damage. You use the software entirely at your own risk. You are responsible for operating your
+   station within the rules of your licence.
+
+   If a court holds a part of this exclusion invalid, the rest stays in force, and the exclusion
+   applies to the fullest extent the law allows.
+
+7. Ending the agreement
+
+   The agreement ends automatically if you break it. Then you must stop using the software and
+   uninstall it.
+
+8. Law
+
+   Swiss law applies, to the extent permitted by the law of your country.

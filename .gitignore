@@ -1,0 +1,4 @@
+# installers are release assets, not part of the repository
+*.exe
+*.msi
+*.zip
