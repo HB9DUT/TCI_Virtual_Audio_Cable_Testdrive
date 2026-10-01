@@ -10,8 +10,8 @@ devices, so that digital-mode programs can use it without a third-party virtual 
 | **TCI RX 1**, **TCI RX 2**, ... | Recording | Receive audio of receiver 1, 2, ... |
 | **TCI TX** | Playback | Audio to transmit |
 
-Transmit is keyed by **VOX**: as soon as audio is played to "TCI TX", the bridge switches the
-transmitter on, and off again shortly after the audio ends.
+Transmit can be keyed by **VOX**, which is **off by default**: when you switch it on, the bridge turns the
+transmitter on as soon as audio is played to "TCI TX", and off again shortly after the audio ends.
 
 > **This is a test version.** Read [What "test version" means](#what-test-version-means) before you
 > install it. Use it on a **test computer or in a virtual machine**, not on the PC you depend on.
