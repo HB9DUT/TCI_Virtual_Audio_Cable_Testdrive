@@ -96,6 +96,18 @@ The default is **48000 Hz**. All "TCI RX n" devices share one rate, "TCI TX" has
 not deliver audio above 48 kHz, so a higher rate would add nothing. A low rate limits the audio bandwidth
 to half the rate (8000 Hz: 4 kHz). Windows converts for programs that want another rate.
 
+## Important: "TCI TX" must not be the default playback device
+
+With VOX on, everything that is played to "TCI TX" transmits. If "TCI TX" is the **default playback
+device** of Windows, the system sounds are played to it too (notifications, the sounds of a device being
+added or removed, ...) and they key your transmitter. So:
+
+- Keep another playback device as the default and select "TCI TX" only in the program that should transmit.
+- In a **virtual machine without sound hardware** "TCI TX" is the only playback device and so the default:
+  turn the sounds off (*Sound settings > Sounds > Sound Scheme: No Sounds*).
+- The bridge ignores audio on "TCI TX" for 5 seconds after it starts, and writes a warning to the log when
+  VOX is on and "TCI TX" is the default device. The configuration tool shows the warning too.
+
 Select "TCI RX n" as the input and "TCI TX" as the output in your program. Play a test tone into a dummy
 load before you transmit, and keep the output level so that the transmit power stays within your limits.
 
