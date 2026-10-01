@@ -3,8 +3,7 @@
 <img src="icon.png" width="96" align="right" alt="">
 
 Connects the audio of a **TCI** host (the TCI server of your SDR software) to normal Windows audio
-devices, so that digital-mode programs such as WSJT-X, JTDX or fldigi can use it without a
-third-party virtual audio cable:
+devices, so that digital-mode programs can use it without a third-party virtual audio cable:
 
 | Windows device | Kind | What it carries |
 |---|---|---|
@@ -74,26 +73,31 @@ Start menu > **TCI configuration**:
 
 - TCI host and port
 - Receivers (0 = as many as the driver has) and the number of **RX endpoints**
-  (a change re-creates the driver device, which takes a few seconds)
+- **Sample rate** of the recording devices ("RX sample rate") and of the playback device ("TX sample rate")
 - VOX: threshold (dB below full scale), hang time (ms) and the transmitter number
 
-*Apply* saves the settings and restarts what needs it. The dialog also shows the state of the service
+*Apply* saves the settings and restarts what needs it. A change of the RX endpoints or of a sample rate
+re-creates the driver device, which takes a few seconds. The dialog also shows the state of the service
 and can start, stop, install and remove it.
 
 For automatic installations, the installer accepts
-`/VERYSILENT /HOST=<ip> /PORT=50001 /ENDPOINTS=2 /VOX=1`.
+`/VERYSILENT /HOST=<ip> /PORT=50001 /ENDPOINTS=2 /VOX=1`, and optionally `/RXRATE=48000 /TXRATE=48000`.
 
-## Use with WSJT-X
+## Sample rate
 
-Typical settings (*File > Settings > Audio*):
+Each device works at one fixed sample rate (stereo, 16 bit). Choose it in the configuration:
 
-- Input: **TCI RX 1** (or RX 2 for the second receiver), channel *Mono* or *Both*
-- Output: **TCI TX**
-- *Radio*: rig **None**, PTT method **VOX** (the bridge keys the transmitter when audio arrives)
+| Rate | Note |
+|---|---|
+| 8000, 12000, 24000, 48000 Hz | The rates a TCI host streams. The audio passes through unchanged. |
+| 44100 Hz | For programs that want it. The audio is converted from and to 48 kHz. |
 
-The same idea works for other programs: pick "TCI RX n" as the input and "TCI TX" as the output.
-Set the output level so that the transmit power stays within your limits: play a test tone into a
-dummy load first.
+The default is **48000 Hz**. All "TCI RX n" devices share one rate, "TCI TX" has its own. The TCI host does
+not deliver audio above 48 kHz, so a higher rate would add nothing. A low rate limits the audio bandwidth
+to half the rate (8000 Hz: 4 kHz). Windows converts for programs that want another rate.
+
+Select "TCI RX n" as the input and "TCI TX" as the output in your program. Play a test tone into a dummy
+load before you transmit, and keep the output level so that the transmit power stays within your limits.
 
 ## If something does not work
 
